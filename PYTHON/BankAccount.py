@@ -18,9 +18,4 @@ class BankAccount: #creating a new class
         intest = (1+(.075/term))**term - 1
         total = intest*amount
         self.deposit(total)
-
-''' --------------------------------------- Trying out the code --------------------------------------- '''
-account1 = BankAccount(3000)
-print(account1.final_balance)
-account2 = BankAccount()
-print(account2.final_balance)
+        
