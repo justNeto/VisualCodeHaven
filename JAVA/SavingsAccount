@@ -16,8 +16,8 @@ public class SavingAccounts extends BankAccount {
     }
 
     /*
-    method for adding an interest to the account
-    method for calculating and updating the finalBalance for an invested amount of balance with interest
+   	method for adding an interest to the account
+  	method for calculating and updating the finalBalance for an invested amount of balance with interest
 	@param amount is to be applied the interest
 	@param term is the time period or frequency of the applied interest
 	@param intest performs the calculations for the interest
@@ -32,7 +32,7 @@ public class SavingAccounts extends BankAccount {
 
     /*
     method for adding an interest to the account
-     and updating the finalBalance for an invested amount of balance with interest
+    and updating the finalBalance for an invested amount of balance with interest
     */
     public void addInterest() {
 		double interest = getBalance()*interestRate2 / 100;
