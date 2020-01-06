@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>Asistente Virtual</title>
+        </head>
+        <body> <!--- This is a comment in HTML --->
+
+            <h1>{{ homepage.init_page }}</h1> <!--- Title of the page (Title1 Tag) --->
+            <br /> <!--- Placing an empty space (separation Tag) --->
+            <img src="TecLogo.jpeg" width="500" height="500">
+            <br />
+            <h3> {{ homepage.user }} </h3> <!--- Title2 of the page --->
+            <form method="username", action="{{ url_for('home_page') }}"> <!--- Declaring a method --->
+                <input name="identity" id="identity">
+            </form>
+            <h3>{{ homepage.password }}</h3>
+            <form method="password", action="{{ url_for('home_page') }}">
+                <input name="get_password" id="get_password">
+                <br />
+                <br />
+                <button type="submit" value="submit">Login</button>
+            </form>
+            <br />
+            <h3>¿No tienes una cuenta? Regístrate en el link de abajo</h3>
+            <form register="no link">
+                <input type="submit" value="Register" />
+            </form>
+        </body>
+    </html>
