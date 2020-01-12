@@ -18,4 +18,12 @@ class BankAccount: #creating a new class
         intest = (1+(.075/term))**term - 1
         total = intest*amount
         self.deposit(total)
-        
+
+    def getBalance(self):
+        return self.final_balance
+    
+
+object1 = BankAccount()
+print(object1.getBalance())
+
+
