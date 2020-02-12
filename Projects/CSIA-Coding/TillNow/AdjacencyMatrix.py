@@ -102,6 +102,7 @@ class Graph: # class graph creates a graph with a given number of vertices and a
             while y != None:
                 stack.append(y)
                 y = prev[y]
+        stack = stack[::-1]
         print(stack)
 """
 THIS IS THE STRUCTURE FOR CREATING THE GRAPH AND ALGORITHMS:
