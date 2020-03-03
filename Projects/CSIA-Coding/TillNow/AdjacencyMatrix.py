@@ -1,7 +1,6 @@
-from copy import copy
-import sys
-import math
+import math, sys
 import numpy as np
+from copy import copy
 
 class Vertex: # class vertex for creating objects with x, y values
 
@@ -97,11 +96,10 @@ class Graph: # class graph creates a graph with a given number of vertices and a
                             prev[v] = u
             del distAux[u]
         stack = list()
-        y = tar
-        if prev[y] != None or y != source:
-            while y != None:
-                stack.append(y)
-                y = prev[y]
+        if prev[tar] != None or tar != org:
+            while tar != None:
+                stack.append(tar)
+                tar = prev[tar]
         stack = stack[::-1]
         print(stack)
 """
