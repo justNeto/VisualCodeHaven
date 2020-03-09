@@ -1,0 +1,9 @@
+
+print("Please enter the circle´s circumference in the c value")
+c = float(input("C= "))
+import math
+math.pi
+solution = (c/(2*math.pi))
+
+print("the circumference is:")
+print(solution)

@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb 25 18:22:39 2020
+
+@author: jorge
+"""
+
+value_str=str(input())
+while value_str != "exit" :
+    if(value_str!= "exit"):
+        print (value_str)
+        value_str=str(input())
+    else:
+        break

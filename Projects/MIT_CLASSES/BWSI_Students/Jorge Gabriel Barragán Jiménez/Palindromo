@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar  2 03:00:30 2020
+
+@author: jorge
+"""
+
+palabra= str(input(""))
+palindromo= palabra[::-1]
+if palabra==palindromo:
+    print("Verdadero")
+else:
+    print("Falso")

@@ -1,0 +1,12 @@
+a = float(input("Type the A value "))
+b = float(input("Type the B value "))
+c = float(input("Type the C value "))
+
+x1 = 0.0
+x2 = 0.0
+
+x1 = (-b + (b**2 - 4*a*c)**(.5))/(2*a)
+x2 = (-b - (b**2 - 4*a*c)**(.5))/(2*a)
+
+print("The x1 value is",x1)
+print("The x2 value is",x2)

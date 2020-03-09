@@ -1,0 +1,10 @@
+print("please enter a word o prhase")
+word= str(input("enter here the word:"))
+A= int(len(word))
+if 3 <= A and A < 10:
+    print("Your word has", A ,"letters in it" )
+elif  A < 3: 
+    print("Text is too short")
+elif A > 10:
+    print("Text is too long")
+                

@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar  3 14:07:12 2020
+
+@author: miran
+"""
+
+#Imprimir TRUE si es palíndromo, FALSE si no lo es
+
+Pal = str(input("Insert a word: "))
+stringLenght = len(Pal)
+slicedString = Pal[stringLenght::-1]
+#print(slicedString.upper())
+#Just to invert the string
+
+if slicedString.upper() == Pal.upper():
+    print ("True")
+else:
+    print("False")

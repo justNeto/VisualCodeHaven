@@ -1,0 +1,33 @@
+
+while True:
+    a = input("enter number:")
+    print(a)
+    if (a == "exit"):
+        print("bye bye")
+        break
+    else:
+        b = input("enter number:")
+        print(b)
+        if(b == "exit"):
+            print("bye bye")
+            break
+        else:
+            c = input("enter number:")
+            print(c)
+            if(c == "exit"):
+                print("bye bye")
+                break
+            else:
+                    x = (-float(b) + ((float(b)**2)-(4*float(a)*float(c)))** 1/2)/ (2* float(a))
+                    x1 = (-float(b) - ((float(b)**2)-(4*float(a)*float(c)))** 1/2)/ (2*float(a))
+                    
+                    print(x); print(x1)
+                    
+                    a = input("enter new number:")
+                    b = input("enter new number:")
+                    c = input("enter new number:")
+            
+                    print(a)
+                    print(b)
+                    print(c)
+        

@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar  1 14:45:40 2020
+
+@author: jessie
+"""
+#PROGRAMA PARA HACER LA SERIE DE FIBONACCI
+a=0
+b=int(input())
+n=int(input("Enter the number of fibonacci series:")) 
+if n<=0:
+    print("Not possible")
+elif n==1:
+    print(a)
+elif n>=2:
+    print("{},{}".format(a,b),end='')
+    for i in range (n):
+        c=a+b
+        print(",{}".format(c),end='')
+        a=b
+        b=c
+

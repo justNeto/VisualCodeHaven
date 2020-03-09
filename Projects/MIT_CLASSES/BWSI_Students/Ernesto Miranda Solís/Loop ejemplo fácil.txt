@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb 25 17:50:45 2020
+
+@author: miran
+"""
+
+"""
+While your program is running, make it ask always for a new input. Then if exit
+is typed, close the program
+Always make sure to know which data type you are working with
+"""
+
+print("This program will ask frequently for the names of your friends, if you have no more friends, click enter")
+ary = []
+E = False
+ex = []
+i = 0
+
+while True:
+    
+    ary.append(str(input("Put your friends name:\n")))
+    if ary[i] == "":
+        break
+        #print (E)
+    i = i + 1
+
+ary.remove('')
+print ("Your friends are: \n", ary)
+

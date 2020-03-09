@@ -1,0 +1,7 @@
+
+text = input("wanna tell me something:")
+
+if (len(text) >= 3 and len(text) <= 10 ):
+        print("good")
+else:
+        print("no, try again")

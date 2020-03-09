@@ -1,0 +1,12 @@
+s = input("Type a word or phrase\n")
+l = []
+t = []
+for i in s:
+    if i != " ":
+        l.append(i)
+for u in range(len(l)):
+    t.append(l[-u-1])
+if l == t:
+    print("True")
+else:
+    print("False")

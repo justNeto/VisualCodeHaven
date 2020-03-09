@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar  3 13:46:32 2020
+
+@author: miran
+"""
+
+#Fibonacci sequence is 1, 1, 2, 3, 5, 8...
+
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return (fibonacci(n-1) + fibonacci(n-2))
+#Esta secuencia fue para establecer desde antes la "función" fibonacci
+    
+Ux = int(input("Enter the number of the Fibonacci sequence you want to know: "))
+
+if Ux < 1:
+    print("Insert a higher positive number")
+else:
+    print("The Fibonacci sequence until you told is:")
+    for i in range (Ux):
+        print(fibonacci(i))

@@ -110,13 +110,7 @@ class Graph: # class graph creates a graph with a given number of vertices and a
         stack = stack[::-1]
         return stack
 """
-THIS IS THE STRUf prev[y] != None or y != source:
-  8             while y != None:
-  7                 stack.append(y)
-  6                 y = prev[y]
-  5         stack = stack[::-1]
-  4         return stack
-CTURE FOR CREATING THE GRAPH AND ALGORITHMS:
+THIS IS THE STRUCTURE FOR CREATING THE GRAPH AND ALGORITHMS:
 
 ----------------------- CREATE Graph OBJECT--------------------------
 
@@ -152,21 +146,3 @@ graphName.get_vertices()-> these are the vertices with their x and y locations
 
 ---------------------------------------------------------------------------
 """
-g = Graph()
-
-g.add_vertex(Vertex('A', 0, 0))
-g.add_vertex(Vertex('B', 5, 4))
-g.add_vertex(Vertex('C', 18, 21))
-g.add_vertex(Vertex('D', 7, 1))
-
-g.init_matrix()
-
-g.add_edge('A', 'B')
-g.add_edge('B', 'C')
-g.add_edge('A', 'C')
-g.add_edge('C', 'D')
-g.add_edge('B', 'D')
-
-# print("This is the adjacency matrix:\n")
-# g.get_matrix() # or get edges / weights between the vertices
-print(g.alg('A', 'D'))

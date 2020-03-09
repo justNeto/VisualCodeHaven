@@ -1,0 +1,15 @@
+#name = input("What is your name?: ")
+#age = input("What is your age?: ")
+#print("My name is "+ name +" and i'm "+ age +" years old" )
+ 
+c = float(input("ingrese el valor de a:"))
+a = float(input("ingrese el valor de b:"))   
+b = float(input("ingrese el valor de c:"))
+raiz= (-b+(b**2-4*a*c)**1/2)
+raiz2= (-b-(b**2-4*a*c)**1/2)
+x1= raiz/(2*a)
+x2= raiz2/(2*a)
+print(x1)
+print(x2)
+
+

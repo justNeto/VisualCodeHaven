@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar  1 15:53:46 2020
+
+@author: jessie
+"""
+#PROGRAMA PARA HACER UN PALINDROMO
+palabra= input("")
+palindromo= palabra[::-1]
+if palabra==palindromo:
+    print("TRUE")
+else:
+    print("FALSE")
+    
+  

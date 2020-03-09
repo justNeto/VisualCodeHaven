@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 27 20:13:47 2020
+
+@author: jorge
+"""
+
+value = str(input(""))
+if len(value)>=3 and len(value)<=10:
+    print("el numero de caracteres de tu palabra es de:", len(value))
+else:
+    print("se excede del numero de caracteres")

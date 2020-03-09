@@ -1,0 +1,30 @@
+print("Type 'exit' to stop de program")
+while True:
+    a = input("Enter the value of A: ")
+    if a == "exit":
+        break
+    b = input("Enter the value of B: ")
+    if b == "exit":
+        break
+    c = input("Enter the value of C: ")
+    if c == "exit":
+        break
+    a = float(a)
+    b = float(b)
+    c = float(c)
+    
+    x1 = 0.0
+    x2 = 0.0
+    x1 = (-b + (b**2 - 4*a*c)**(.5))/(2*a)
+    x2 = (-b - (b**2 - 4*a*c)**(.5))/(2*a)
+    
+    if (type(x1) == float) and (type(x2) == float):
+        print("The two sqaureroots are",x1,"and",x2)
+    elif type(x1) != float:
+        if type(x2) != float:
+            print("There are no real squareroots")
+        else:
+            print("There is only one square root:",x2)
+    elif type(x2) != float:
+        print("There is only one real square root:",x1)
+print("You just exited the program...")

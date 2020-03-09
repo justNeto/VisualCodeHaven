@@ -1,0 +1,9 @@
+a = float(input("Type a value for a  "))
+b = float(input("Type a value for b "))
+c = float(input("Type a value for c "))
+
+x1 = ((-b)+((b*2)-(4*a*c))*(1/2))/(2*a)
+x2 = ((-b)-((b*2)-(4*a*c))*(1/2))/(2*a)
+
+print("The value for x1 is: ",x1)
+print("The value for x2 is: ",x2)

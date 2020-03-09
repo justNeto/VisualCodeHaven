@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar  2 02:50:17 2020
+
+@author: jorge
+"""
+
+import math
+math.pi
+pi= math.pi
+circunferencia= float(input("CUÁL ES EL VALOR DE TU CIRCUNFERENCIA?:"))
+radio= circunferencia/(2*pi)
+print ("Tu radio es de:", radio)

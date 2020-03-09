@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb 25 17:41:01 2020
+
+@author: jessie
+"""
+#Este programa es para preguntarle al usuario su calificación y comparar 
+g= int(input("grade of the subject: "))
+if (g<70):
+    print ("You failed:(")
+elif (g>70 and g<=75):
+    print("that was close")
+elif (g==76 and g>=85):
+    print("Incredible")
+else:
+    print("OMG:O")
+    
+#Programa de números complejos 
+c = float(input("ingrese el valor de a:"))
+a = float(input("ingrese el valor de b:"))   
+b = float(input("ingrese el valor de c:"))
+raiz= (-b+(b**2-4*a*c)**1/2)
+x1= raiz/(2*a)
+
+if (raiz<0):
+    print("The operation can not be made")
+else:
+    print (x1)
+    
+
+#Programa de loop
+value_str=(input())
+while (value_str != "exit"):
+    if(value_str != "exit"):
+        print(value_str)
+        value_str=(input())
+    else:
+        break
+
+    

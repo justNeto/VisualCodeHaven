@@ -1,0 +1,12 @@
+def FS(number):
+   if number == 1:
+      return 0
+   elif number == 2:
+      return 1
+   elif number == 0:
+        print("Not possible.")
+   else:
+      return FS(number-1)+FS(number-2)
+
+number = int(input("Enter the position you would like to know (In the Fibonacci Sequence): "))
+print("The number in the", number,"th position is: ", FS(number))

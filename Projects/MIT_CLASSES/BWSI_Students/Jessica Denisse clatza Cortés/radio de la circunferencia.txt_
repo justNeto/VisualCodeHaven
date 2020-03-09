@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar  1 14:39:50 2020
+
+@author: jessie
+"""
+#PROGRAMA PARA SACAR EL RADIO DE LA CIRCUNFERENCIA
+import math 
+math.pi
+pi= math.pi
+circunferencia= float(input("Dime el valor de la circunferencia:"))
+radio= float(circunferencia/(2*pi))
+print("El radio de la circunferencia es de:",radio)

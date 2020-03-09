@@ -1,0 +1,13 @@
+print("The quadratic formula is as follows: ax\u00b2 + bx + c")
+a = float(input("Please, enter a in ax\u00b2 \n"))
+b = float(input("Enter b in bx \n"))
+c = float(input("Enter c \n"))
+
+#Method 1
+root1 = (-b + ( (b**2) - 4*a*c )**( 1/2 ) ) / (2*a)
+root2 = (-b - ( (b**2) - 4*a*c )**( 1/2 ) ) / (2*a)
+
+#Printing the results
+print("The roots from the equation ", a, "x\u00b2 + ", b, "x + ", c, "are:")
+print("x\u2081 = ", root1)
+print("x\u2082 = ", root2)

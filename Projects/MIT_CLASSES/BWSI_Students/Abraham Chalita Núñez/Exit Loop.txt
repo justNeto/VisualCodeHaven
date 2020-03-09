@@ -1,0 +1,4 @@
+var = input
+while var != (“exit”):
+    var = input(“Enter an input: “)
+print(“Loop has ended”)

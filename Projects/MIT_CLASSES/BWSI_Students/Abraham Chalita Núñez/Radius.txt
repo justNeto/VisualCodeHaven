@@ -1,0 +1,4 @@
+import math
+perimeter = float(input("Enter the perimeter (cm) of a circle to calculate its radius: "))
+answer = ((perimeter/math.pi)/2)
+print("The radius of the circle is: ", answer, "cm.")

@@ -1,0 +1,11 @@
+grade = float(input("Enter your grade (0-100): "))    
+if grade < 70:
+    print("You failed. :(")
+elif 70<=grade<=75:
+    print("That was close!")
+elif 76<=grade<=85:
+    print("Good")
+elif 86<=grade<=95:
+    print("Incredible!")
+elif 96<=grade:
+    print("OMG :O")

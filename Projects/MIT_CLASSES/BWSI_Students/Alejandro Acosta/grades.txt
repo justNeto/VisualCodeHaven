@@ -1,0 +1,13 @@
+grade = float(input('gimme your grade'))
+print(grade)
+
+if (grade < 70):
+    print('you failed')
+elif(grade <= 75):
+    print('so close')
+elif(grade <= 85):
+    print('good')
+elif(grade <= 95):
+    print('remarkable')
+else:
+    print('OMG')    

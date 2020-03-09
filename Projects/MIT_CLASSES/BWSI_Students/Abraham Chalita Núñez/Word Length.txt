@@ -1,0 +1,6 @@
+wordlength = input("Type a word: ")
+#The word needs to be bigger or equal than 3 and smaller than 10. 
+if len(wordlength) >= 3 and len(wordlength) < 10:
+    print("The chain is within the parameters. ")
+else:
+    print("The chain is NOT within the parameters. ")

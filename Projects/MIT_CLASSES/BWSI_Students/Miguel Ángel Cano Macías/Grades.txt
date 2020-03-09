@@ -1,0 +1,12 @@
+#Tiene float para tomar en cuenta decimales de calificaciones como 87.5
+g = float(input("Type in your grade on a scale of 0-100: "))
+if (g < 70):
+    print("You failed :(")
+elif (70 <= g < 75):
+    print("That was close")
+elif (75 <= g < 85):
+    print("Good")
+elif (85 <= g < 95):
+    print("Incredible")
+elif (95 <= g <=100):
+    print("OMG :O")

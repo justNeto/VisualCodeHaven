@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar  1 21:57:41 2020
+
+@author: jessie
+"""
+
+#El siguiente código pretende realizar una media entre 3 números, pero no fnciona correctamente.
+#¿Eres capaz de identificar el problem ay solucionarlo?
+#Asignamos el número a su respectiva variable.
+
+numero_1=9
+numero_2=3
+numero_3=6
+
+#calculo de media
+media= (numero_1+numero_2+numero_3)/3
+#imprimimos la nota
+print("La nota media es",media)

@@ -1,0 +1,4 @@
+import math
+per = float(input("Type in your circle's circunference\n"))
+rad = (per/math.pi)/2
+print("The circle's radius is",rad)

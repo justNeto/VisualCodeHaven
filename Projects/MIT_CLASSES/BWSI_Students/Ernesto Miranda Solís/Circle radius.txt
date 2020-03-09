@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar  3 13:02:41 2020
+
+@author: miran
+"""
+
+#Circunferencia = pi * diametro
+import math
+
+C = float(input("Insert the value of the circunference:\n"))
+print ("The circunference of your circle is", C)
+D = float(C/math.pi)
+R = D / 2
+
+print("The radius of your circle is:", R)
+print("The radius of your circle rounded to 2 decimals is:", round(R,2))
