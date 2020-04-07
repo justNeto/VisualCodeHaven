@@ -6,12 +6,8 @@ import numpy as np
 class Vertex: # class vertex for creating objects with x, y values
 
     def __init__(self, vertexName, x_cor, y_cor):
-        if isinstance(vertexName, str) and isinstance(x_cor, int) and isinstance(y_cor, int):
-            self.name = vertexName # name of the Node, also could be considered as a label :)
-            self.location = [x_cor, y_cor] # x and y coordinates of the node inside the map image
-        else:
-            return "You are doing something wrong"
-            return False # sends a warning
+        self.name = vertexName # name of the Node, also could be considered as a label :)
+        self.location = [x_cor, y_cor] # x and y coordinates of the node inside the map image
 
 
 class Graph: # class graph creates a graph with a given number of vertices and allows to add weights
@@ -101,14 +97,14 @@ class Graph: # class graph creates a graph with a given number of vertices and a
                         if alt < dist[v]:
                             dist[v] = alt
                             prev[v] = u
-        stack = list()
+        lastList = list()
         y = tar
         if prev[y] != None or y != org:
             while y != None:
-                stack.append(y)
+                lastList.append(y)
                 y = prev[y]
-        stack = stack[::-1]
-        return stack
+        lastList = lastList[::-1]
+        return lastList
 """
 
 THIS IS THE STRUCTURE FOR CREATING THE GRAPH AND ALGORITHMS:
@@ -127,13 +123,12 @@ graphName.add_vertex(NameOfVertex)
 
 ------------------------------- OR ----------------------------------
 
-graphName.add_vertex(NameOfVertex('NAME',x_coor, y_coor)
+graphName.add_vertex(Vertex('NAME',x_coor, y_coor)
 
 ---------------------- INIT MATRIX AND WEIGHTS ----------------------
 
 graphName.init_matrix()
 graphName.add_edge('NameOfVertexOne, 'NameOfVertexTwo')
-
 
 ----------------------- OTHER METhODS (PRIVATE) ---------------------
 
@@ -147,3 +142,109 @@ graphName.get_vertices()-> these are the vertices with their x and y locations
 
 ---------------------------------------------------------------------------
 """
+
+g = Graph()
+g.add_vertex(Vertex('Foldio',8.45, 6.23))
+g.add_vertex(Vertex('Otros/others',13.09,6.26))
+g.add_vertex(Vertex('Sala de maestros/teachers lounge',21.10, 6.38))
+g.add_vertex(Vertex('A5', 27.39,6.31))
+g.add_vertex(Vertex('Al',25.42,9.17))
+g.add_vertex(Vertex('Sanitarios/restrooms 1',29.80, 6.06))
+g.add_vertex(Vertex('Transportec',27.45,11.52))
+g.add_vertex(Vertex('Ak',25.54,13.16))
+g.add_vertex(Vertex('Aj',22.94,13.07))
+g.add_vertex(Vertex('Ai',20.48,13.15))
+g.add_vertex(Vertex('Ag',18.02,13.12))
+g.add_vertex(Vertex('Ah',18.02,9.72))
+g.add_vertex(Vertex('Ad',15.70,10.99))
+g.add_vertex(Vertex('Ab',15.58,13.15))
+g.add_vertex(Vertex('A1',14.76,15.33))
+g.add_vertex(Vertex('A2',19.29,15.37))
+g.add_vertex(Vertex('A3', 24.70,15.32))
+g.add_vertex(Vertex('Ac',13.16,13.08))
+g.add_vertex(Vertex('Af',13.13,9.27))
+g.add_vertex(Vertex('A4',27.49,15.30))
+g.add_vertex(Vertex('T1',31.77,7.94))
+g.add_vertex(Vertex('T2',31.85,10.45))
+g.add_vertex(Vertex('M1',29.95,12.06))
+g.add_vertex(Vertex('P3',33.31,11.43))
+g.add_vertex(Vertex('Usos multiples/multiple uses',32.86,9.81))
+g.add_vertex(Vertex('M2',27.49,18.62))
+g.add_vertex(Vertex('M3',27.49,21.80))
+g.add_vertex(Vertex('Labs/Locatec',34.18,6.06))
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+g.add_vertex(Vertex())
+
+''''''
+g.init_matrix()
+
+g.add_edge('Foldio','Otros/others')
+g.add_edge('Foldio','Af')
+g.add_edge('Foldio', 'Ah')
+g.add_edge('Otros/others','Af')
+g.add_edge('Otros/others', 'Ah')
+g.add_edge('Otros/others','Ad')
+g.add_edge('Otros/others','Sala de maestros/teachers lounge')
+g.add_edge('Af','Ah')
+g.add_edge('Af','Ac')
+g.add_edge('Ac','Ab')
+g.add_edge('Ac','A1')
+g.add_edge('Ab','Ad')
+g.add_edge('Ad','Ah')
+g.add_edge('Ah','Ag')
+g.add_edge('A1','A2')
+g.add_edge('A2','Ag')
+g.add_edge('A2','Ai')
+g.add_edge('A2','A3')
+g.add_edge('A3','Aj')
+g.add_edge('Aj','Sala de maestros/teachers lounge')
+g.add_edge('Sala de maestros/teachers lounge','Al')
+g.add_edge('Sala de maestros/teachers lounge','A5')
+g.add_edge('Al','Ak')
+g.add_edge('Aj','Ak')
+g.add_edge('A3','Ak')
+g.add_edge('A3','A4')
+g.add_edge('A4','Ak')
+g.add_edge('A4','Transportec')
+g.add_edge('Transportec','A5')
+g.add_edge('A5','Sanitarios/restrooms 1')
+''''''
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()
+g.add_edge()

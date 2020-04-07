@@ -1,7 +1,33 @@
 {% extends "page_layout.html" %}
 {% block unique %}
-		<header><h3>Por favor inserte donde se encuentra y su destino con respecto al mapa.</h>
-			<h/>Please enter the origin and destination according to the map.</h3></header>
 
+		<header><h3>Por favor inserte donde se encuentra y su destino con respecto al mapa.</h3><h3>Please enter the origin and destination according to the map.</h3></header>
+		<div class="img-wrapper">
+			<img src="../static/disney.png" height="80%" width="100%">
+		</div>
 
+		<form method="post">
+			<div class="input-group">
+            	<div class="input-group-prepend">
+					<label class="input-group-text" for="origin">Origin</label>
+				</div>
+            	<select name="origin" class="custom-select" id="origin">
+                	{% for key in data %}
+						<option value="{{ key }}">{{ key }}</option>
+					{% endfor %}
+            	</select>
+        	</div>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<label class="input-group-text" for="destination">Destination</label>
+				</div>
+		<select name="destination" class="custom-select" id="destination">
+                	{% for key in data %}
+						<option value="{{ key }}">{{ key }}</option>
+					{% endfor %}
+            	</select>
+        	</div>
+
+        	<button type="submit">Submit</button>
+    	</form>
 {% endblock unique %}

@@ -14,7 +14,7 @@
 			<link rel=stylesheet type=text/css href="{{ url_for('static', filename='layout.css') }}">
 
 			{% if title %} <!-- This searches for the variable "title" in the main.py script, and updates the page accordingly -->
-				<title>GATC - {{ title }}</title> <!-- if there is title for the page, update--->
+				<title>GATC - {{ title }}</title> <!-- if there is title for the page, update -->
 			{% else %}
 				<title>GATC - Login Page</title> <!-- else, it should be the login page-->
 			{% endif %}
@@ -22,8 +22,8 @@
 
 	<body>
 		<div class="container">
-		{% block unique %} <!-- The block unique will be overwritten in each of the different html files -->
-		{% endblock %} <!-- in the official tutorial is also called block body -->
+			{% block unique %} <!-- The block unique will be overwritten in each of the different html files -->
+			{% endblock %} <!-- in the official tutorial is also called block body -->
 		</div>
 
 		<footer id="page-footer">
