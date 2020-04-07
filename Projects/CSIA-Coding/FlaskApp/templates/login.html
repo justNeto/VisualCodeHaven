@@ -2,7 +2,20 @@
 {% block unique %}
 	<body>
 		<header>
-			<h1>Welcome to the GoAroundTheCampus App!</h1>
+			<h1>Welcome students to the GoAroundTheCampus App!</h1>
+			<h1> Bienvenidos estudiantes a la aplicación ¡VeAlrededorDelCampus!</h1>
+			<h2>Login</h2>
+			{% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+			<form action="{{ url_for('login') }}" method=post>
+    				<dl>
+      				<dt>Username:
+      				<dd><input type=text name=username>
+      				<dt>Password:
+      				<dd><input type=password name=password>
+      				<dd><input type=submit value=Login>
+   				</dl>
+  			</form>
 		</header>
 	</body>
 {% endblock unique %}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- In this layout template the required template for all the html/bootstrap/jinja to be inherited is defined -->
+<html lang="en">
+
+	<head> <!-- This is the head of the webpage i.e. the tab name -->
+			 <!-- Required meta tags -->
+    		<meta charset="utf-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+			<!-- End of the required meta tags and names-->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+			<!--Fontawesome CDN-->
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+			<link rel=stylesheet type=text/css href="{{ url_for('static', filename='layout.css') }}">
+
+			{% if title %} <!-- This searches for the variable "title" in the main.py script, and updates the page accordingly -->
+				<title>GATC - {{ title }}</title> <!-- if there is title for the page, update--->
+			{% else %}
+				<title>GATC - Login Page</title> <!-- else, it should be the login page-->
+			{% endif %}
+	</head>
+
+	<body>
+		<div class="container">
+		{% block unique %} <!-- The block unique will be overwritten in each of the different html files -->
+		{% endblock %} <!-- in the official tutorial is also called block body -->
+		</div>
+
+		<footer id="page-footer">
+			<p>&copy; 2020. Todas las imágenes están reservadas por parte del Tec de Monterrey, CCM.</p>
+			<p> All pictures are reserved to Tec de Monterrey, CCM. </p>
+		</footer>
+	</body>
+</html>
