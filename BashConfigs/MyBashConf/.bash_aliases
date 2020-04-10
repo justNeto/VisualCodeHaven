@@ -17,15 +17,19 @@ alias web='cd /var/www/html'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Edit this .bashrc file
-alias ebrc='nvim ~/.bashrc'
+alias ebrc='sudo nvim ~/.bashrc'
+alias eba='sudo nvim ~/.bash_aliases'
 
 # Show help for this .bashrc file
 alias hlp='less ~/.bashrc_help'
 
 # alias to show the date
-alias da='date "+%Y-%m-%d %A %T %Z"'
+alias dat='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias j='jobs'
+alias ns='cd /home/neto/newSongs'
+alias py='sudo python3'
 alias cp='sudo cp'
 alias mv='sudo mv'
 alias rm='sudo rm'
@@ -37,8 +41,9 @@ alias cls='clear'
 alias apt-get='sudo apt-get'
 alias multitail='multitail --no-repeat -c'
 alias freshclam='sudo freshclam'
-alias n='nvim'
+alias n='sudo nvim'
 alias e='exit'
+
 # Change directory aliases
 alias home='cd ~'
 alias cd..='cd ..'
@@ -50,8 +55,8 @@ alias .....='cd ../../../..'
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
 
-# Remove a directory and all files
-alias rmd='/bin/rm  --recursive --force --verbose '
+# Remove a directory and all files  echo -en "\ec\e[3J"
+alias rmd='sudo rm -rf'
 
 # Alias's for multiple directory listing commands
 alias la='ls -Alh' # show hidden files
@@ -100,8 +105,9 @@ alias ipview="netstat -anpl | grep :80 | awk {'print \$5'} | cut -d\":\" -f1 | s
 alias openports='netstat -nape --inet'
 
 # Alias's for safe and forced reboots
-alias rebootsafe='sudo shutdown -r now'
-alias rebootforce='sudo shutdown -r -n now'
+alias rbtsafe='sudo shutdown -r now'
+alias rbtforce='sudo shutdown -r -n now'
+alias st='sudo shutdown now'
 
 # Alias's to show disk space and space used in a folder
 alias diskspace="du -S | sort -n -r |more"
@@ -122,20 +128,28 @@ alias ungz='sudo tar -xvzf'
 # Show all logs in /var/log
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
-# SHA1
+# Easy functionalities
 alias sha1='openssl sha1'
-alias up='sudo apt-get update && sudo apt-get upgrade'
-alias st='sudo shutdown now'
+alias up='sudo apt-get update && sudo apt-get upgrade && clear'
 alias cv='cd /home/neto/VisualCodeHaven/Projects/CSIA-Coding'
+
+# Git aliases to remember
 alias gitc='sudo git commit'
 alias gitps='sudo git push'
 alias gitpl='sudo git pull'
 alias gita='sudo git add .'
 alias gitr='sudo git rm -f'
 alias gits='sudo git status'
+
+# Aliases for images, videos, Pdf's 
 alias img='eog'
 alias vid='mplayer'
-alias cf='cd /home/neto/FTCStuff_19d08m2019y/SkyStone/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples'
-alias rmd='sudo rm -rf'
 alias pdf='evince'
+
+# Cool useless aliases
 alias m='cmatrix'
+
+# Aliases for initializing programs
+alias jn='jupyter notebook'
+alias dis='discord'
+alias zoom='zoom &'

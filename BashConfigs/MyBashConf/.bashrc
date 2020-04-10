@@ -54,7 +54,7 @@ export VISUAL=nvim
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
-export LS_COLORS='no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.xml=00;31:'
+export LS_COLORS='no=00:fi=00:di=00;32:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.xml=00;31:'
 #export GREP_OPTIONS='--color=auto' #deprecated
 
 alias grep='grep --color=auto'
@@ -81,6 +81,27 @@ fi
 #######################################################
 # SPECIAL FUNCTIONS
 #######################################################
+
+#////# THIS IS JUST AN EXAMPLE OF HOW BUILT-IN FUNCTIONS WORK #////#
+
+#A bash file always stars with [! /bin/sh]
+# echo '$#' $#
+# echo '$@' $@
+# echo '$?' $?
+#
+# INPUT:
+# ./test.sh 1 2 3
+#
+# OUTPUT:
+# $# -> 3 = number of arguments
+# $@ -> 1 2 3 = what parameters are passed
+# $? -> 0 = was the last command succesful? 0: yes, 1: no
+#
+#
+#////# END OF EXAMPLE #////#
+
+# Entering firefox in a simple manner and sending the command to background
+ff () {	firefox "$@" & }
 
 # Extracts any archive(s) (if unp isn't installed)
 extract () {
@@ -144,8 +165,10 @@ cpp ()
 cpg ()
 {
 	if [ -d "$2" ];then
+		clear
 		cp $1 $2 && cd $2
 	else
+		clear
 		cp $1 $2
 	fi
 }
@@ -154,8 +177,10 @@ cpg ()
 mvg ()
 {
 	if [ -d "$2" ];then
+		clear
 		mv $1 $2 && cd $2
 	else
+		clear
 		mv $1 $2
 	fi
 }
@@ -163,6 +188,7 @@ mvg ()
 # Create and go to the directory
 mkdirg ()
 {
+	clear
 	mkdir -p $1
 	cd $1
 }
@@ -180,6 +206,7 @@ upg ()
 	if [ -z "$d" ]; then
 		d=..
 	fi
+	clear
 	cd $d
 }
 
@@ -187,8 +214,10 @@ upg ()
 cd ()
 {
 	if [ -n "$1" ]; then
+		clear
  		builtin cd "$@" && ls
  	else
+		clear
  		builtin cd ~ && ls
  	fi
 }
@@ -466,16 +495,16 @@ function __setprompt
 
 	# Date
 	PS1+="\[${DARKGRAY}\](\[${CYAN}\]\$(date +%a) $(date +%b-'%-m')" # Date
-	PS1+="${BLUE} $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-" # Time
+	PS1+="${WHITE} $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-" # Time
 
 	# CPU
-	PS1+="(\[${MAGENTA}\]CPU $(cpu)%"
+	PS1+="(\[${YELLOW}\]CPU $(cpu)%"
 
 	# Jobs
 	PS1+="\[${DARKGRAY}\]:\[${MAGENTA}\]\j"
 
 	# Network Connections (for a server - comment out for non-server)
-	PS1+="\[${DARKGRAY}\]:\[${MAGENTA}\]Net $(awk 'END {print NR}' /proc/net/tcp)"
+	PS1+="\[${DARKGRAY}\]:\[${MAGENTA}\]Neto $(awk 'END {print NR}' /proc/net/tcp)"
 
 	PS1+="\[${DARKGRAY}\])-"
 
