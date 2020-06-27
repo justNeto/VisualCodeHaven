@@ -1,0 +1,86 @@
+#!/bin/sh
+
+#  __  ____   __
+# |  \/  \ \ / /
+# | |\/| |\ V /
+# | |  | | | |
+# |_|  |_| |_|
+#
+#    _________        _    _     ___    _    ____  _____ ____
+#   |__  / ___|      / \  | |   |_ _|  / \  / ___|| ____/ ___|
+#     / /\___ \     / _ \ | |    | |  / _ \ \___ \|  _| \___ \
+#  _ / /_ ___) |   / ___ \| |___ | | / ___ \ ___) | |___ ___) |
+# (_)____|____/___/_/   \_\_____|___/_/   \_\____/|_____|____/
+#            |_____|
+#
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias n="nvim" vimdiff="nvim -d"
+
+# Edit this .bashrc file
+alias \
+	eza="nvim ~/.config/aliasrc" \
+	ezrc="nvim ~/.config/zsh/.zshrc" \
+	sk="cd /home/_neto/VisualCodeHaven" \
+	cs="sudo chmod +x" \
+	sc="cd /home/_neto/.local/bin"
+	alias e="exit"
+	home="cd ~" \
+	alias ..="cd .."
+	alias ...="cd ../.."
+	alias ....="cd ../../.."
+	alias .....="cd ../../../.."
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="sudo cp -iv" \
+	mv="sudo mv -iv" \
+	rm="sudo rm -vI" \
+	mkd="mkdir -pv" \
+	rmd="sudo rm -rf" \
+	up="sudo pacman -Syu" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+	ls="sudo ls -ahN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	trem="transmission-remote" \
+	sdn="sudo shutdown -h now" \
+	p="sudo pacman" \
+	xi="sudo xbps-install" \
+	xr="sudo xbps-remove -R" \
+	xq="xbps-query"
+
+	alias \
+	magit="nvim -c MagitOnly" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
+	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+
+alias \
+	gcl="git clone" \
+	ga="sudo git add ." \
+	gs="sudo git status" \
+	gc="sudo git commit" \
+	gps="sudo git push" \
+	gpl="sudo git pull"
+
+alias \
+	m="cmatrix" \
+	nf="neofetch" \
+	sv="straw-viewer" \
+	img="sxiv" \
+	vid="mpv" \
+	aud="mpv" \
+	pdf="zathura" \
+	cl="ncmpcpp --screen=clock"
+
+alias \
+	awp="sudo chmod a+w"

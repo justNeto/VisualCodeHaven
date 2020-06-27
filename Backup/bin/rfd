@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ ! -f "noimgs" ] && echo $(($(ls -A | wc -l) - $(ls -A -d */ | wc -l))) > noimgs
+
+i=1
+find . -type f -name '*.png' -exec mv {} file{((i++))} \;

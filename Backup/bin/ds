@@ -1,0 +1,10 @@
+#!/bin/sh
+
+var=$(python3 /home/_neto/Music/youtube_search.py "$*") #find the url with python
+figlet Downloading your song! Please wait ...
+sudo youtube-dl -o -x -q --audio-format mp3 --output "%(title)s.%(ext)s" $var #download song quietly and rename it
+sudo find . -type f -name "*.webm" -exec bash -c 'FILE="$1"; ffmpeg -loglevel panic -i "${FILE}" -vn -ab 128k -ar 44100 -y "${FILE%.webm}.mp3";' _ '{}' \;
+sudo find . -type f -name "*.mkv" -exec bash -c 'FILE="$1"; ffmpeg -loglevel panic -i "${FILE}" -vn -c:a libmp3lame -y "${FILE%.mkv}.mp3";' _ '{}' \;
+sudo find . -name "*.mkv" -exec sudo rm {} \;
+sudo find . -name "*.webm" -exec sudo rm {} \;
+mpc up

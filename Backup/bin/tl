@@ -1,0 +1,13 @@
+#!/bin/sh
+
+t=$HOME/.toggle
+
+if [ ! -e $t ]; then
+	touch $t
+	notify-send -t 1000 "Changing to Latam Keyboard"
+	setxkbmap latam
+else
+	rm $t
+	notify-send -t 1000 "Changing to US Keyboard"
+	setxkbmap us
+fi

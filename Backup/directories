@@ -1,0 +1,10 @@
+h	~/
+d	~/Documents
+dn	~/Downloads
+m	~/Music
+pp	~/Pictures
+vv	~/Videos
+cf	~/.config}
+cac     ~/.cache}
+sc 	~/.local/bin
+fl	~/Files

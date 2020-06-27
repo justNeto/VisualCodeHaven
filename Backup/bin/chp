@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sudo systemctl stop bluetooth.service && sudo systemctl start bluetooth.service && bluetoothctl power on
+bool=0
+
+while [ "$bool" -eq 0 ]; do
+	bluetoothctl connect 38:18:4C:11:65:B3
+	var=$?
+	if [ $var -eq 0 ]; then
+		bool=1
+		notify-send "Headset returned a 0!"
+	fi
+done
